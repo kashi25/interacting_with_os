@@ -23,3 +23,24 @@ print(check_punctuation("This is a sentence fragment without a period")) # False
 print(check_punctuation("Aren't regular expressions awesome?")) # True
 print(check_punctuation("Wow! We're really picking up some steam now!")) # True
 print(check_punctuation("End of the line")) # False
+
+
+
+
+# next
+print(re.search(r"[^a-zA-Z]", "This is a sentence with space"))
+# <re.Match object; span=(4, 5), match=' '>search any character that is  not a letter
+
+
+print(re.search(r"[^a-zA-Z ]", "This is a sentence with space."))
+# <re.Match object; span=(29, 30), match='.'>
+
+print(re.search(r"cat|dag", "i like cats."))
+# <re.Match object; span=(7, 10), match='cat'>
+
+print(re.search(r"cat|dag", "i like cats and dog."))
+# <re.Match object; span=(7, 10), match='cat'>
+
+print(re.findall(r"cat|dog", "i like cat and dog"))
+# <re.Match object; span=(7, 10), match='cat'>
+# ['cat', 'dog']
