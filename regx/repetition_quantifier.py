@@ -11,6 +11,12 @@ print(re.search(r"o+l+", "goldfish"))
 print(re.search(r"o+l+", "booley"))
 # <re.Match object; span=(1, 4), match='ool'>
 
+print(re.search(r"p?each", "To each there own"))
+# match each
+
+print(re.search(r"p?each", "i like peach"))
+# match peach
+
 import re
 def repeating_letter_a(text):
   result = re.search(r'a.*a', text, re.IGNORECASE)
